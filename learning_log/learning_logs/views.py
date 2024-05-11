@@ -8,6 +8,7 @@ def index(request):
     """Página principal do learning_log"""
     if request.method == 'POST':
         return render(request, 'learning_logs/index.html')
+    return HttpResponseRedirect(reverse('learning_logs/index.html'))
 
 def topics(request):
     """Mostra todos os assuntos"""
