@@ -6,7 +6,8 @@ from django.urls import reverse
 
 def index(request):
     """Página principal do learning_log"""
-    return render(request, 'learning_logs/index.html')
+    if request.method == 'POST':
+        return render(request, 'learning_logs/index.html')
 
 def topics(request):
     """Mostra todos os assuntos"""
